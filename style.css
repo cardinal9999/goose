@@ -1,0 +1,22 @@
+body {
+  background-color: #000;
+}
+    cat {
+                display: block;
+                margin-bottom: 0em;
+            }
+    p {
+      color: green
+    }
+		a{
+			color:yellow
+		}
+    h1 {
+      color: green
+    }
+    h2 {
+      color: green
+    }
+    code-block {
+      color: dodgerblue
+    }
