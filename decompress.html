@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<script src="https://brython.info/src/brython.js"></script>
+<script type="text/javascript" src="https://brython.info/src/brython_stdlib.js"></script>
+
+<script src="https://brython.info/assets/header.brython.js"></script>
+<style>body {
+background-color: #000;
+}
+  cat {
+              display: block;
+              margin-bottom: 0em;
+          }
+  catr {
+              display: block;
+              margin-bottom: 1em;
+                  }
+
+  * {
+    color: green
+}
+
+</style>
+<script type="text/python">
+from browser import document, html
+t = "t"
+def goose(ev):
+  def rev_replace(x, xy, xz):
+    return x.replace(xz, xy)
+  a = document['entry'].value
+  b = document['nodes'].value
+
+  if b == "a":
+    a = rev_replace(a, '{"', chr(4))
+    a = rev_replace(a, '":', chr(5))
+    a = rev_replace(a, '"}', chr(6))
+    a = rev_replace(a, '["', chr(7))
+    a = rev_replace(a, '"]', chr(29))
+    a = rev_replace(a, '",', chr(20))
+    a = rev_replace(a, "true", chr(24) + chr(26))
+    a = rev_replace(a, "false", chr(23) + chr(25))
+    a = rev_replace(a, "null", chr(23) + chr(3))
+    document<=  f"{a}"
+  elif b == "b":
+    a = rev_replace(a, "<?xml ", chr(4))
+    a = rev_replace(a, 'version="', chr(5))
+    a = rev_replace(a, 'encoding="', chr(6))
+    a = rev_replace(a, "</", chr(7))
+    a = rev_replace(a, '="', chr(25))
+    a = rev_replace(a, '">', chr(3))
+    document<=  f"{a}\n"
+  elif b == "c":
+    a = rev_replace(a, "such ", chr(4))
+    a = rev_replace(a, "is ", chr(5))
+    a = rev_replace(a, "and ", chr(6))
+    a = rev_replace(a, "many", chr(7))
+    a = rev_replace(a, "empty", chr(23))
+    a = rev_replace(a, "wow", chr(12))
+    document<= f"{a}\n\n"
+  elif b == "d":
+    a = rev_replace(a, "##", chr(4))
+    a = rev_replace(a, "###", chr(5))
+    a = rev_replace(a, "```", chr(6))
+    a = rev_replace(a, "**", chr(7))
+    a = rev_replace(a, "---", chr(3))
+    a = rev_replace(a, "](", chr(11))
+    a = rev_replace(a, "![", chr(12))
+    a = rev_replace(a, "~~", chr(22))
+    a = rev_replace(a, "[^1]", chr(23))
+    document<= f"{a}\n"
+document["cm"].bind("click", goose)
+  </script>
+<body onload="brython(1)"><font face="courier">
+<h1>Decompress Data</h1>
+<cat></cat>
+<label for="entry">Data to decompress:</label><catr></catr><textarea id="entry"></textarea><cat></cat>
+<label for="nodes">Node type:</label>
+<select name="nodes" id="nodes">
+  <option value="a">JSON</option>
+  <option value="b">XML</option>
+  <option value="c">DogeON</option>
+  <option value="d">Markdown</option>
+</select></font>
+<cat></cat><button id="cm">Decompress</button><cat></cat>
+</body>
+
+</html>

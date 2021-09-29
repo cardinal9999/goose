@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><meta
+			name="description"
+      content="Fast, simple, and lossless compression for JSON, Markdown, XML, and DogeON nodes."
+      />
+<title>Goose - Fast compression</title>
+<body>
+  <style>body {
+  background-color: #000;
+}
+    cat {
+                display: block;
+                margin-bottom: 0em;
+            }
+    p {
+      color: green
+    }
+		a{
+			color:yellow
+		}
+    h1 {
+      color: green
+    }
+    h2 {
+      color: green
+    }
+    code-block {
+      color: dodgerblue
+    }
+  </style>
+<font face="courier">
+<h1>Goose</h1><cat></cat>
+<p>Goose is an online tool for compression. You can compress different types of data.</p><cat></cat><h2>How it Works</h2>
+<p>
+Goose works by replacing common substrings found in nodes with ASCII control characters.<cat></cat>
+Suppose we have this JSON node: <code-block>{"userid": 4545, "icons": ["/img/4545_16.png", "/img/4545_32.png"], "status": null, "deleted": false}</code-block><cat></cat>
+It is hard to believe the object is 101 characters long. We can compress this by replacing some common substrings with ASCII characters.
+<cat></cat>If we use the Goose compression tool to compress the JSON object, we get this:<cat></cat>
+ userid 4545, "icons /img/4545_16.png "/img/4545_32.png, "status , "deleted }. This string is only 88 characters long.
+ <cat></cat>If you want to decompress, you can use the decompression tool.
+</p>
+<h2>Collisions</h2><cat></cat><p>A collision occurs when the decompressor detects an ASCII character that is not a compressed substring.<cat></cat>This can cause
+ problems in decompression because the decompressor parses ASCII characters as keywords.<cat></cat> Escape characters are the solution. For node types that do not have escape characters, you can encode them with Base64.<cat></cat>
+</p><h2>Why Goose?</h2><cat></cat><p>-> Goose is free, fast, lightweight, and simple.<cat></cat>-> Goose's algorithm
+ can compress different types of data, and can even compress scripts.<cat></cat>-> Because Goose uses simple algorithms, it gooses up compression in a variety of programming languages.<cat></cat>
+ <a href="compress.html">Compress</a> | <a href="decompress.html">Decompress</a>
+</font></p>
+</body>
+</html>
