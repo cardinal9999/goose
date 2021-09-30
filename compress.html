@@ -32,7 +32,7 @@ def goose(ev):
     a = a.replace('":', chr(5))
     a = a.replace('"}', chr(6))
     a = a.replace('["', chr(7))
-    a = a.replace('"]', chr(29))
+    a = a.replace('"]', chr(21))
     a = a.replace('",', chr(20))
     a = a.replace("true", chr(24) + chr(26))
     a = a.replace("false", chr(23) + chr(25))
@@ -66,6 +66,16 @@ def goose(ev):
     a = a.replace("[^1]", chr(23))
     a = a.replace("\n", " <br/>")
     document<= f"{a}\n"
+  elif b == "e":
+    a = a.replace("- ", chr(4))
+    a = a.replace(": ", chr(5))
+    a = a.replace("{{", chr(6))
+    a = a.replace("}}", chr(7))
+    a = a.replace("true", chr(11))
+    a = a.replace("false", chr(12))
+    a = a.replace("%YAML", chr(14))
+    a = a.replace("---", chr(15))
+    document <= f"{a}\n"
 document["cm"].bind("click", goose)
   </script>
 <body onload="brython(1)"><font face="courier">
@@ -78,6 +88,7 @@ document["cm"].bind("click", goose)
   <option value="b">XML</option>
   <option value="c">DogeON</option>
   <option value="d">Markdown</option>
+  <option value="e">YAML</option>
 </select></font>
 <cat></cat><button id="cm">Compress</button><cat></cat>
 </body>
