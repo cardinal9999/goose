@@ -69,14 +69,14 @@ def goose(ev):
     a = rev_replace(a, "[^1]", chr(23))
     document<= f"{a}\n"
   elif b == "e":
-    a = rev_replace("- ", chr(4))
-    a = rev_replace(": ", chr(5))
-    a = rev_replace("{{", chr(6))
-    a = rev_replace("}}", chr(7))
-    a = rev_replace("true", chr(11))
-    a = rev_replace("false", chr(12))
-    a = rev_replace("%YAML", chr(14))
-    a = rev_replace("---", chr(15))
+    a = rev_replace(a, "- ", chr(4))
+    a = rev_replace(a, ": ", chr(5))
+    a = rev_replace(a, "{{", chr(6))
+    a = rev_replace(a, "}}", chr(7))
+    a = rev_replace(a, "true", chr(11))
+    a = rev_replace(a, "false", chr(12))
+    a = rev_replace(a, "%YAML", chr(14))
+    a = rev_replace(a, "---", chr(15))
     document <= f"{a}\n"
 document["cm"].bind("click", goose)
   </script>
