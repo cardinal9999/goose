@@ -8,9 +8,11 @@ body {
     p {
       color: green
     }
-		a{
+    #a1{
 			color:yellow
 		}
+		#a2 {
+			color: cyan}
     h1 {
       color: green
     }
