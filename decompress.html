@@ -37,9 +37,10 @@ def goose(ev):
     a = rev_replace(a, '["', chr(7))
     a = rev_replace(a, '"]', chr(29))
     a = rev_replace(a, '",', chr(20))
-    a = rev_replace(a, "true", chr(24) + chr(26))
+    a = rev_replace(a, "true", chr(24))
     a = rev_replace(a, "false", chr(23) + chr(25))
     a = rev_replace(a, "null", chr(23) + chr(3))
+    a = rev_replace(a, ' "', chr(26))
     document<=  f"{a}"
   elif b == "b":
     a = rev_replace(a, "<?xml ", chr(4))
