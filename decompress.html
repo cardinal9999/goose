@@ -56,6 +56,8 @@ def goose(ev):
     a = rev_replace(a, "many", chr(7))
     a = rev_replace(a, "empty", chr(23))
     a = rev_replace(a, "wow", chr(12))
+    a = rev_replace(a, ' "', chr(25))
+    a = rev_replace(a, 'so', chr(3))
     document<= f"{a}\n\n"
   elif b == "d":
     a = rev_replace(a, "##", chr(4))
