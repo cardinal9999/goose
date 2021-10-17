@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+  background-color: #000;
+}
+    br1 {
+                display: block;
+                margin-bottom: 0em;
+            }
+    p {
+      color: green
+    }
+    #a1{
+			color:yellow
+		}
+		#a2 {
+			color: cyan}
+    h1 {
+      color: green
+    }
+    h2 {
+      color: green
+    }
+    div {
+      color: dodgerblue
+    }
+  </style>
+<body><font face="courier">
+
+<h1>Testing Goose Compression</h1><br1></br1>
+<h2>Test 1: </h2><br1></br1>
+<p>JSON String: </p><br1></br1>
+<div>{"buttonIDs": ["login1", "login2"], "functions": ["LoginCheck()", "getLoginFromServer(hash)"], "inset": [true, false]}</div><br1></br1>
+<p>Compressed: </p><br1></br1>
+<div>buttonIDs login1login2,functions LoginCheck()getLoginFromServer(hash),inset [, ]}</div>
+<p>Percent changed: 16.94915% smaller</p><br1></br1><br1></br1>
+
+<h2>Test 2: </h2><br1></br1>
+<p>XML String: </p><br1></br1>
+<div>&#x3C;scratch&#x3E;&#x3C;projectNodes&#x3E;&#x3C;block extension=&#x22;motion&#x22; shadow=&#x22;false&#x22;&#x3E;&#x3C;inputs type=&#x22;1&#x22;&#x3E;[10]&#x3C;/inputs&#x3E;&#x3C;/block&#x3E;
+&#x3C;stats allowShadow=&#x22;1&#x22; cloud=&#x22;0&#x22;&#x3E;&#x3C;/stats&#x3E;&#x3C;/projectNodes&#x3E;&#x3C;/scratch&#x3E;</div><br1></br1>
+<p>Compressed: </p><br1></br1>
+<div>&#x3C;scratch&#x3E;&#x3C;projectNodes&#x3E;&#x3C;block extension&#x19;motion&#x22; shadow&#x19;false&#x3;&#x3C;inputs type&#x19;1&#x3;[10]&#x7;inputs&#x3E;&#x7;block&#x3E; &#x3C;stats allowShadow&#x19;1&#x22; cloud&#x19;0&#x3;&#x7;stats&#x3E;&#x7;projectNodes&#x3E;&#x7;scratch&#x3E;</div>
+<p>Percent changed: 7.1428571% smaller</p><br1></br1>
+
+<h2>Test 3: </h2><br1></br1>
+<p>DSON String: </p><br1></br1>
+<div>such "shibe" is so "shiba inu" many, "doge" is so "dogescript" also "dogeon" many. "dogeon" is yes wow</div><br1></br1>
+<p>Compressed: </p><br1></br1>
+<div>"shibe" shiba inu" ,doge" dogescript" aldogeon" .dogeon" yes</div>
+<p>Percent changed: 25.49019% smaller</p><br1></br1>
+  </body></html>
