@@ -46,6 +46,7 @@ def goose(ev):
     a = a.replace("</", chr(7))
     a = a.replace('="', chr(25))
     a = a.replace('">', chr(3))
+    a = a.replace("><", chr(27))
     document<=  f"{a}\n"
   elif b == "c":
     a = a.replace("such ", chr(4))
