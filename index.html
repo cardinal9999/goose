@@ -18,7 +18,7 @@ It is hard to believe the object is 101 characters long. We can compress this by
 <code-block>userid 4545,icons /img/4545_16.png/img/4545_32.png,status ,deleted }</code-block>. This string is only 84 characters long.
  <cat></cat>If you want to decompress, you can use the decompression tool.
 </p>
-<h2>Collisions</h2><cat></cat><p>A collision occurs when the decompressor detects an ASCII character that is not a compressed substring. Because Goose uses ASCII characters, collisions are uncommon.<cat></cat>This can cause
+<h2>Collisions</h2><cat></cat><p>A collision occurs when the decompressor detects an ASCII character that is not a compressed substring. Because Goose uses ASCII characters, collisions are uncommon.<cat></cat>Collisions can cause
  problems in decompression because the decompressor parses ASCII characters as keywords.<cat></cat> Escape characters are the solution. For node types that do not have escape characters, you can encode them with Base64.<cat></cat>
 </p><h2>Why Goose?</h2><cat></cat><p>-> Goose is free, fast, lightweight, and simple.<cat></cat>-> Goose's algorithm
  can compress different types of data, and can even compress scripts.<cat></cat>-> Because Goose uses simple algorithms, it gooses up compression in a variety of programming languages.<cat></cat>
