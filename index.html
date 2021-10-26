@@ -11,7 +11,7 @@
 <h1>Goose</h1><cat></cat>
 <p>Goose is an online tool for compression. You can compress different types of data.</p><cat></cat><h2>How it Works</h2>
 <p>
-Goose is a modification of the LZW compression. It works by replacing common substrings found in nodes with ASCII control characters.<cat></cat>
+Goose is a modification of byte pair encoding. It works by replacing common substrings found in nodes with ASCII control characters.<cat></cat>
 Suppose we have this JSON node: <code-block>{"userid": 4545, "icons": ["/img/4545_16.png", "/img/4545_32.png"], "status": null, "deleted": false}</code-block><cat></cat>
 It is hard to believe the object is 101 characters long. We can compress this by replacing some common substrings with ASCII characters.
 <cat></cat>If we use the Goose compression tool to compress the JSON object, we get this:<cat></cat>
