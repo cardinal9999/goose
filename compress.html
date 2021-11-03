@@ -24,6 +24,11 @@ background-color: #000;
 <script type="text/python">
 from browser import document, html
 t = "t"
+
+def gooseUtil(d):
+  for i in d.splitlines():
+    document <= html.P(i)
+  
 def goose(ev):
   a = document['entry'].value
   b = document['nodes'].value
@@ -38,7 +43,7 @@ def goose(ev):
     a = a.replace("false", chr(23) + chr(25))
     a = a.replace("null", chr(23) + chr(3))
     a = a.replace(' "', chr(26))
-    document<=  f"{a}"
+    gooseUtil(f"{a}\n")
   elif b == "b":
     a = a.replace("<?xml ", chr(4))
     a = a.replace('version="', chr(5))
@@ -47,7 +52,7 @@ def goose(ev):
     a = a.replace('="', chr(25))
     a = a.replace('">', chr(3))
     a = a.replace("><", chr(27))
-    document<=  f"{a}\n"
+    gooseUtil(f"{a}\n")
   elif b == "c":
     a = a.replace("such ", chr(4))
     a = a.replace("is ", chr(5))
@@ -57,7 +62,7 @@ def goose(ev):
     a = a.replace("wow", chr(12))
     a = a.replace("so", chr(3))
     a = a.replace(' "', chr(25))
-    document<= f"{a}\n\n"
+    gooseUtil(f"{a}\n")
   elif b == "d":
     a = a.replace("##", chr(4))
     a = a.replace("###", chr(5))
@@ -69,7 +74,7 @@ def goose(ev):
     a = a.replace("~~", chr(22))
     a = a.replace("[^1]", chr(23))
     a = a.replace("\n", " <br/>")
-    document<= f"{a}\n"
+    gooseUtil(f"{a}\n")
   elif b == "e":
     a = a.replace("opcode", chr(4))
     a = a.replace("inputs", chr(5))
@@ -79,7 +84,7 @@ def goose(ev):
     a = a.replace("false", chr(12))
     a = a.replace('"shadow":false,', chr(14))
     a = a.replace("name", chr(15))
-    document <= f"{a}\n"
+    gooseUtil(f"{a}\n")
 document["cm"].bind("click", goose)
   </script>
 <body onload="brython(1)"><font face="courier">
