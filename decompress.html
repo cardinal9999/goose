@@ -36,12 +36,8 @@ def goose(ev):
   b = document['nodes'].value
 
   if b == "a":
-    a = rev_replace(a, '{"', chr(4))
-    a = rev_replace(a, '":', chr(5))
-    a = rev_replace(a, '"}', chr(6))
-    a = rev_replace(a, '["', chr(7))
-    a = rev_replace(a, '"]', chr(29))
-    a = rev_replace(a, '",', chr(20))
+    a = rev_replace(a, '{"', chr(4)); a = rev_replace(a, '":', chr(5)); a = rev_replace(a, '"}', chr(6))
+    a = rev_replace(a, '["', chr(7)); a = rev_replace(a, '"]', chr(29)); a = rev_replace(a, '",', chr(20))
     a = rev_replace(a, "true", chr(24))
     a = rev_replace(a, "false", chr(23) + chr(25))
     a = rev_replace(a, "null", chr(23) + chr(3))
