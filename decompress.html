@@ -85,7 +85,7 @@ def goose(ev):
     a = rev_replace(a, "true", chr(11))
     a = rev_replace(a, "false", chr(12))
     a = rev_replace(a, "name", chr(15))
-    a = rev_replace(a, "null", chr(27))
+    a = rev_replace(a, "null", chr(27)) # will this work?
     gooseUtil(f"{a}\n")
 document["cm"].bind("click", goose)
   </script>
