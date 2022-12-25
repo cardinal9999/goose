@@ -84,6 +84,7 @@ def goose(ev):
     a = a.replace("true", chr(11))
     a = a.replace("false", chr(12))
     a = a.replace("name", chr(15))
+    a = a.replace("null", chr(19))
     gooseUtil(f"{a}\n")
 document["cm"].bind("click", goose)
   </script>
