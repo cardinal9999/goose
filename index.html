@@ -14,7 +14,7 @@
 Goose is a modification of byte pair encoding and works by replacing common substrings found in nodes with ASCII control characters.<cat></cat>
 Suppose we have this JSON node: <code-block>{"userid": 4545, "icons": ["/img/4545_16.png", "/img/4545_32.png"], "status": null, "deleted": false}</code-block><cat></cat>
 It is hard to believe the object is 101 characters long. We can compress this by replacing some common substrings with ASCII characters.
-<cat></cat>If we use the Goose compression tool to compress the JSON object, we get this:<cat></cat>
+<cat></cat>Once we use the Goose compression tool to compress the JSON object, we get this:<cat></cat>
 <code-block>userid 4545,icons /img/4545_16.png/img/4545_32.png,status ,deleted }</code-block>. (This string is only 84 characters long.)
  <cat></cat>If you want to decompress, you can use the decompression tool.
 </p>
